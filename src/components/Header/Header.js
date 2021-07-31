@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import {BREAKPOINTS, COLORS, QUERIES, WEIGHTS} from '../../constants';
+import {COLORS, QUERIES, WEIGHTS} from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
@@ -16,6 +16,9 @@ const Header = () => {
   // with an onClick handler, something like this:
   //
   // <button onClick={() => setShowMobileMenu(true)}>
+  const onMenuClick = (e) => {
+    setShowMobileMenu(true);
+  }
 
   return (
     <header>
@@ -54,7 +57,7 @@ const Header = () => {
             <VisuallyHidden>Search</VisuallyHidden>
           </UnstyledButton>
 
-          <UnstyledButton>
+          <UnstyledButton onClick={onMenuClick}>
             <Menu />
 
             <VisuallyHidden>Menu</VisuallyHidden>
