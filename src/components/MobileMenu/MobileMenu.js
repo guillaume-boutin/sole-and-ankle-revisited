@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { DialogOverlay, DialogContent } from '@reach/dialog';
 
-import {COLORS, QUERIES, WEIGHTS} from '../../constants';
+import { WEIGHTS } from '../../constants';
 
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
@@ -52,7 +52,7 @@ const Overlay = styled(DialogOverlay)`
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: hsl(220deg 5% 40% / 0.8);
+  background-color: var(--color-backdrop);
   display: flex;
   justify-content: flex-end;
 `;
@@ -69,7 +69,7 @@ const Content = styled(DialogContent)`
 const DismissButton = styled.button`
   background-color: transparent;
   padding: 16px;
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   border: none;
   cursor: pointer;
   position: absolute;
@@ -81,13 +81,13 @@ const Nav = styled.nav`
   a {
     display: block;
     text-decoration: none;
-    color: ${COLORS.gray[900]};
+    color: var(--color-gray-900);
     font-weight: ${WEIGHTS.medium};
     font-size: ${18/16}rem;
     text-transform: uppercase;
     
     &:first-of-type {
-      color: ${COLORS.secondary};
+      color: var(--color-secondary);
     }
     
     &:not(:first-of-type) {
@@ -109,7 +109,7 @@ const Footer = styled.footer`
   a {
     display: block;
     text-decoration: none;
-    color: ${COLORS.gray[700]};
+    color: var(--color-gray-700);
     font-size: ${14/16}rem;
     font-weight: ${WEIGHTS.normal};
     
