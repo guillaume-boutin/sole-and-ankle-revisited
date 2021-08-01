@@ -98,7 +98,7 @@ const Nav = styled.nav`
 
 const Filler = styled.div`
   flex: 1;
-`
+`;
 
 const Footer = styled.footer`
   flex: 1;

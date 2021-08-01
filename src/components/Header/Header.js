@@ -35,6 +35,10 @@ const Header = () => {
 
           <NavLink href="/men">Men</NavLink>
 
+          <NavLink href="/men">Men</NavLink>
+
+          <NavLink href="/men">Men</NavLink>
+
           <NavLink href="/women">Women</NavLink>
 
           <NavLink href="/kids">Kids</NavLink>
@@ -77,8 +81,10 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  height: 72px;
+  //height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  
+  overflow-x: scroll;
   
  @media(${QUERIES.tabletAndDown}) {
    align-items: center;
@@ -100,7 +106,11 @@ const LogoWrapper = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(
+    1rem,
+    8.9vw - 4.25rem,
+    3rem
+  );
   margin: 0px 48px;
   
   @media(${QUERIES.tabletAndDown}) {
